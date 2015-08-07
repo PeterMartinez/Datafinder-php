@@ -5,9 +5,13 @@ Basic SDK for [Data Finder API](https://datafinder.com/api/overview).
 ## Dependencies
 
 PHP 5.2+
+
 Guzzle HTTP Client
 
 ## Getting Started
+
+### Install
+composer require petermartinez/datafinder-php
 
 ### Initializing Datafinder
 
