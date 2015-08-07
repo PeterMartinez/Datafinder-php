@@ -1,5 +1,16 @@
 {
+    "name": "petermartinez/Datafinder-php",
+    "description": "Basic SDK for Datafinder.com API I Details @ https://datafinder.com/api/overview",
+    "authors": [
+        {
+            "name": "Peter Martinez",
+            "email": "emailme@PeterMartinez.com"
+        }
+    ],  
+    "autoload": {
+        "psr-0": { "Datafinder\\": ["src/"] }
+    },
     "require": {
         "guzzlehttp/guzzle": "^6.0"
-    }
+    }    
 }
