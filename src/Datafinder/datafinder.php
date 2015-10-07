@@ -93,7 +93,8 @@ class Datafinder
             $results = $this->client->post(
                     $this->base_url."qdf.php?k2=".$this->api_key."&service=".$service."&output=".$this->output, 
                     [
-                        'form_params' => $search
+                        'form_params' => $search,
+                        'timeout'=>0
                      ]);
             return json_decode(($results->getBody()->getContents()),true);//TODO PARSE XML IF OUTPUT XML
 
