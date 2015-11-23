@@ -84,14 +84,18 @@ class Datafinder
         */
         public function contactAppend($service="email",$search=array(),$cfg_mc=null,$dcfg_emailinvalid=null)
         {
+            $path = "qdf.php?k2=".$this->api_key."&service=".$service."&output=".$this->output;
+
             if($cfg_mc != null){
-                $search['cfg_mc'] = $cfg_mc;
+                $path .= '&cfg_mc='.$cfg_mc;
             }
+            
             if($dcfg_emailinvalid != null){
-                $search['dcfg_emailinvalid'] = $dcfg_emailinvalid;
+                $path .= '&dcfg_emailinvalid='.$dcfg_emailinvalid;                
             }
+
             $results = $this->client->post(
-                    $this->base_url."qdf.php?k2=".$this->api_key."&service=".$service."&output=".$this->output, 
+                    $this->base_url.$path, 
                     [
                         'form_params' => $search,
                         'timeout'=>0
